@@ -3,13 +3,21 @@ package com.streetsell.app.streetsell;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.Fragment;
+import android.support.v4.view.PagerAdapter;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import java.util.List;
+import java.util.Vector;
+
 public class MainActivity extends AppCompatActivity {
+
+    private PagerAdapter mPagerAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,6 +25,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        inititializePaging();
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -27,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    /*
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -47,5 +58,15 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    } */
+
+    private void inititializePaging() {
+        List<Fragment> fragments = new Vector<>();
+        fragments.add(TestFragment.newInstance("sell view"));
+        fragments.add(TestFragment.newInstance("graph view"));
+        fragments.add(TestFragment.newInstance("expenses view"));
+        this.mPagerAdapter = new MainPagerAdapter(getSupportFragmentManager(),fragments);
+        ViewPager pager = (ViewPager) findViewById(R.id.viewpager);
+        pager.setAdapter(this.mPagerAdapter);
     }
 }
