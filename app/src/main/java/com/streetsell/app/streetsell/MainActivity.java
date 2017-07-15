@@ -64,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
         List<Fragment> fragments = new Vector<>();
         fragments.add(TestFragment.newInstance("sell view"));
         fragments.add(TestFragment.newInstance("graph view"));
-        fragments.add(TestFragment.newInstance("expenses view"));
+        fragments.add(new ExpenseFragment());
         this.mPagerAdapter = new MainPagerAdapter(getSupportFragmentManager(),fragments);
         ViewPager pager = (ViewPager) findViewById(R.id.viewpager);
         pager.setAdapter(this.mPagerAdapter);
