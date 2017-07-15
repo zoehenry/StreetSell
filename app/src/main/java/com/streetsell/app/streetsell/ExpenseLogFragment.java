@@ -19,6 +19,12 @@ import android.widget.Toast;
  */
 
 public class ExpenseLogFragment extends Fragment {
+    private OnRecordExpenseListener mListener;
+
+    public interface OnRecordExpenseListener{
+        public void onRecordExpense(View view);
+    }
+
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,19 +35,20 @@ public class ExpenseLogFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
         final View expenseLogView = inflater.inflate(R.layout.fragment_expense_log, container, false);
-        final View expenseView = inflater.inflate(R.layout.fragment_expense, container, false);
-        Button button = (Button)expenseLogView.findViewById(R.id.save);
-        button.setOnClickListener(new View.OnClickListener() {
-            Context context = getActivity();
 
+        Button button = (Button) expenseLogView.findViewById(R.id.button);
+        button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                FragmentManager fm = getFragmentManager();
-                FragmentTransaction ft = fm.beginTransaction();
-                ft.replace(R.id.expenseFragment, new TestFragment(), "fragment_screen");
-                ft.commit();
-                return expenseView;
+                mListener.onRecordExpense(view);
             }
         });
+        return expenseLogView;
+    }
+
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        mListener = (OnRecordExpenseListener)getActivity();
     }
 }

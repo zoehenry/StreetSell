@@ -19,9 +19,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <fragment android:name=".ExpenseFragment"
+        <activity android:name=".RecordExpenseActivity"
             android:theme="@style/AppTheme" >
-        </fragment>
+        </activity>
         <fragment android:name=".ExpenseLogFragment"
             android:theme="@style/AppTheme" >
         </fragment>

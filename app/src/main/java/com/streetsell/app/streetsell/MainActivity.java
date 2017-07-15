@@ -1,21 +1,22 @@
 package com.streetsell.app.streetsell;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
-import android.view.Menu;
-import android.view.MenuItem;
 
 import java.util.List;
 import java.util.Vector;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements ExpenseLogFragment.OnRecordExpenseListener {
 
     private PagerAdapter mPagerAdapter;
 
@@ -64,9 +65,15 @@ public class MainActivity extends AppCompatActivity {
         List<Fragment> fragments = new Vector<>();
         fragments.add(TestFragment.newInstance("sell view"));
         fragments.add(TestFragment.newInstance("graph view"));
-        fragments.add(new ExpenseFragment());
+        fragments.add(new ExpenseLogFragment());
         this.mPagerAdapter = new MainPagerAdapter(getSupportFragmentManager(),fragments);
         ViewPager pager = (ViewPager) findViewById(R.id.viewpager);
         pager.setAdapter(this.mPagerAdapter);
+    }
+
+    @Override
+    public void onRecordExpense(View view) {
+        Intent i = new Intent(this, RecordExpenseActivity.class);
+        startActivity(i);
     }
 }
