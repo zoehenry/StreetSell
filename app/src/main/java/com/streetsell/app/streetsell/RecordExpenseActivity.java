@@ -29,6 +29,8 @@ public class RecordExpenseActivity extends AppCompatActivity {
                 Toast toast = Toast.makeText(getBaseContext(), text, duration);
                 toast.setGravity(Gravity.TOP, 0, 450);
                 toast.show();
+
+                finish();
             }
         });
     }
