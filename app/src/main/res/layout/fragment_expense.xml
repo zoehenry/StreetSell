@@ -19,19 +19,19 @@
         android:layout_height="40dp"
         android:layout_marginTop="38dp"
         android:text="What did you buy?"
-        android:layout_below="@+id/titleVIEW"
+        android:layout_below="@+id/expenseFragment"
         android:layout_alignStart="@+id/QUANTITYbought" />
 
     <TextView
-        android:id="@+id/titleVIEW"
+        android:id="@+id/expenseFragment"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:text="Expenses Tracker"
         android:textAlignment="center"
         android:textSize="36sp"
-        android:layout_marginTop="14dp"
+        android:layout_marginTop="15dp"
         android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentStart="true" />
 
     <EditText
         android:id="@+id/editText3"
