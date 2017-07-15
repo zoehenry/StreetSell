@@ -67,7 +67,7 @@ public class MainActivity extends AppCompatActivity
 
     private void inititializePaging() {
         List<Fragment> fragments = new Vector<>();
-        fragments.add(TestFragment.newInstance("sell view"));
+        fragments.add(TransactionMaker.newInstance());
         fragments.add(new SalesTracker());
         fragments.add(new ExpenseLogFragment());
         this.mPagerAdapter = new MainPagerAdapter(getSupportFragmentManager(),fragments);
