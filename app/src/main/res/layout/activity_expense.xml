@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/QUANTITYbought"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="How much did you spend?"
+        android:layout_below="@+id/editText3"
+        android:layout_alignStart="@+id/editText5"
+        android:layout_marginTop="30dp" />
+
+    <TextView
+        android:id="@+id/WHATbought"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="38dp"
+        android:text="What did you buy?"
+        android:layout_below="@+id/titleVIEW"
+        android:layout_alignStart="@+id/QUANTITYbought" />
+
+    <TextView
+        android:id="@+id/titleVIEW"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="Expenses Tracker"
+        android:textAlignment="center"
+        android:textSize="36sp"
+        android:layout_marginTop="14dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true" />
+
+    <EditText
+        android:id="@+id/editText3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="I bought..."
+        android:layout_below="@+id/WHATbought"
+        android:layout_alignEnd="@+id/save"
+        android:layout_marginTop="21dp" />
+
+    <EditText
+        android:id="@+id/editText4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:hint="I spent..."
+        android:layout_below="@+id/QUANTITYbought"
+        android:layout_toEndOf="@+id/editText5" />
+
+    <EditText
+        android:id="@+id/editText5"
+        style="@android:style/Widget.AutoCompleteTextView"
+        android:layout_width="20dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/editText4"
+        android:layout_alignBottom="@+id/editText4"
+        android:layout_alignStart="@+id/editText3"
+        android:ems="10"
+        android:inputType="none"
+        android:text="$" />
+
+    <Button
+        android:id="@+id/save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="47dp"
+        android:text="Save" />
+
+</RelativeLayout>
