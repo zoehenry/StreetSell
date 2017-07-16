@@ -107,6 +107,14 @@ public class MainActivity extends AppCompatActivity
         if (resultCode == RESULT_OK && requestCode == 20) {
             String item = data.getExtras().getString("purchase");
             String text = item;
+            String cost = data.getExtras().getString("cost");
+            String number = "$" + cost;
+            TextView whatCost = (TextView) findViewById(R.id.textView79);
+            whatCost.setText(number);
+            TextView whatFood = (TextView) findViewById(R.id.textView81);
+            whatFood.setText(text);
+            TextView date = (TextView) findViewById(R.id.textView82);
+            date.setText("07/16/17");
             int duration = Toast.LENGTH_SHORT;
 
             Toast toast = Toast.makeText(getBaseContext(), text, duration);
