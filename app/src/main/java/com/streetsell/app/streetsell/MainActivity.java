@@ -11,7 +11,9 @@ import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.Gravity;
 import android.view.View;
+import android.widget.Toast;
 
 import java.util.List;
 import java.util.Vector;
@@ -74,6 +76,19 @@ public class MainActivity extends AppCompatActivity implements ExpenseLogFragmen
     @Override
     public void onRecordExpense(View view) {
         Intent i = new Intent(this, RecordExpenseActivity.class);
-        startActivity(i);
+        startActivityForResult(i, 20);
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (resultCode == RESULT_OK && requestCode == 20) {
+            String item = data.getExtras().getString("purchase");
+            String text = item;
+            int duration = Toast.LENGTH_SHORT;
+
+            Toast toast = Toast.makeText(getBaseContext(), text, duration);
+            toast.setGravity(Gravity.TOP, 0, 450);
+            toast.show();
+        }
     }
 }

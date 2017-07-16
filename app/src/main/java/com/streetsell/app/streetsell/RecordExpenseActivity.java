@@ -1,11 +1,13 @@
 package com.streetsell.app.streetsell;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Toast;
 
 /**
@@ -23,6 +25,12 @@ public class RecordExpenseActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View view) {
+                Intent i = new Intent(getBaseContext(), RecordExpenseActivity.class);
+                EditText purchaseInputView = (EditText) findViewById(R.id.editText3);
+                String purchaseInputText = (String) purchaseInputView.getText().toString();
+                i.putExtra("purchase", purchaseInputText);
+                setResult(RESULT_OK, i);
+
                 CharSequence text = "Your expenses have been saved!";
                 int duration = Toast.LENGTH_SHORT;
 
