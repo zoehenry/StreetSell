@@ -10,74 +10,73 @@
         android:id="@+id/textView78"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hamburger buns"
+        android:text="Masa"
         android:layout_alignBaseline="@+id/textView54"
         android:layout_alignBottom="@+id/textView54"
-        android:layout_alignParentEnd="true"
-        android:layout_marginEnd="24dp" />
+        android:layout_alignStart="@+id/textView68" />
 
     <TextView
         android:id="@+id/textView77"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Cheese"
+        android:text="Pork"
         android:layout_alignBaseline="@+id/textView60"
         android:layout_alignBottom="@+id/textView60"
-        android:layout_alignStart="@+id/textView76" />
+        android:layout_alignStart="@+id/textView68" />
 
     <TextView
         android:id="@+id/textView76"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Water"
+        android:text="Chicken"
         android:layout_alignBaseline="@+id/howMuchHeader"
         android:layout_alignBottom="@+id/howMuchHeader"
-        android:layout_alignStart="@+id/textView75" />
+        android:layout_alignStart="@+id/textView68" />
 
     <TextView
         android:id="@+id/textView75"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Onions"
+        android:text="Limes"
         android:layout_alignBaseline="@+id/textView59"
         android:layout_alignBottom="@+id/textView59"
-        android:layout_alignStart="@+id/textView74" />
+        android:layout_alignStart="@+id/textView68" />
 
     <TextView
         android:id="@+id/textView74"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Lettuce"
+        android:text="Cheese"
         android:layout_alignBaseline="@+id/textView58"
         android:layout_alignBottom="@+id/textView58"
-        android:layout_alignStart="@+id/textView73" />
+        android:layout_alignStart="@+id/textView68" />
 
     <TextView
         android:id="@+id/textView73"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Tomato"
+        android:text="Lard"
         android:layout_alignBaseline="@+id/textView57"
         android:layout_alignBottom="@+id/textView57"
-        android:layout_alignStart="@+id/textView72" />
+        android:layout_alignStart="@+id/textView68" />
 
     <TextView
         android:id="@+id/textView72"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Bacon"
+        android:text="Tomatoes"
         android:layout_alignBaseline="@+id/textView56"
         android:layout_alignBottom="@+id/textView56"
-        android:layout_alignStart="@+id/textView71" />
+        android:layout_alignStart="@+id/textView68" />
 
     <TextView
         android:id="@+id/textView71"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Ketchup"
+        android:text="Gas"
         android:layout_alignBaseline="@+id/textView55"
         android:layout_alignBottom="@+id/textView55"
-        android:layout_alignStart="@+id/textView78" />
+        android:layout_alignStart="@+id/textView68" />
 
     <TextView
         android:id="@+id/textView68"
@@ -86,7 +85,7 @@
         android:text="What?"
         android:layout_alignBaseline="@+id/textView53"
         android:layout_alignBottom="@+id/textView53"
-        android:layout_alignStart="@+id/textView78" />
+        android:layout_toEndOf="@+id/button" />
 
     <TextView
         android:id="@+id/dateHeader"
