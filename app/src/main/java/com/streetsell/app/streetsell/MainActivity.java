@@ -136,6 +136,7 @@ public class MainActivity extends AppCompatActivity
     }
 
     GraphView graph;
+
     public  void lastWeek(View v){
         if( graph != null )
             graph.removeAllSeries();
@@ -151,6 +152,7 @@ public class MainActivity extends AppCompatActivity
     public  void lastMonth(View v){
         if( graph != null )
             graph.removeAllSeries();
+        graph = (GraphView) findViewById(R.id.graph);
         LineGraphSeries<DataPoint> series = new LineGraphSeries<>(new DataPoint[] {
                 new DataPoint(3, 2),
                 new DataPoint(1, 3),
@@ -163,6 +165,7 @@ public class MainActivity extends AppCompatActivity
     public  void last3Months(View v){
         if( graph != null )
             graph.removeAllSeries();
+        graph = (GraphView) findViewById(R.id.graph);
         LineGraphSeries<DataPoint> series = new LineGraphSeries<>(new DataPoint[] {
                 new DataPoint(3, 2),
                 new DataPoint(1, 3),

@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.jjoe64.graphview.GraphView;
 import com.jjoe64.graphview.series.DataPoint;
@@ -22,6 +23,15 @@ import com.jjoe64.graphview.series.LineGraphSeries;
  * create an instance of this fragment.
  */
 public class SalesTracker extends Fragment {
+
+    private OnSalesTrackerListener sListener;
+
+    public interface OnSalesTrackerListener {
+        public  void lastWeek(View v);
+        public  void lastMonth(View v);
+        public  void last3Months(View v);
+    }
+
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -62,36 +72,16 @@ public class SalesTracker extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+
     }
 
+    Button bl;
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+    public View onCreateView(final LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        final View salesTrackerView = inflater.inflate(R.layout.fragment_sales_tracker, container, false);
 
-        final Button lastWeek = (Button)salesTrackerView.findViewById(R.id.lastWeek);
-        lastWeek.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                // Code here executes on main thread after user presses button
-                lastWeek();
-            }
-        });
-        final Button lastMonth = (Button)salesTrackerView.findViewById(R.id.lastMonth);
-        lastMonth.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                // Code here executes on main thread after user presses button
-                lastMonth();
-            }
-        });
-        final Button last3Months = (Button)salesTrackerView.findViewById(R.id.last3Months);
-        last3Months.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                // Code here executes on main thread after user presses button
-                last3Months();
-            }
-        });
 
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_sales_tracker, container, false);
@@ -136,14 +126,18 @@ public class SalesTracker extends Fragment {
         void onFragmentInteraction(Uri uri);
     }
 
+
     @Override
     public void onResume() {
         super.onResume();
-        lastWeek();
+        //sListener.lastWeek(getView());
+
     }
 
-    public void lastWeek(){
+
+ /*   public void lWeek(){
         GraphView graph = (GraphView) getView().findViewById(R.id.graph);
+        graph.removeAllSeries();
         LineGraphSeries<DataPoint> series = new LineGraphSeries<>(new DataPoint[] {
                 new DataPoint(0, 1),
                 new DataPoint(1, 5),
@@ -151,19 +145,5 @@ public class SalesTracker extends Fragment {
         });
         graph.addSeries(series);
     }
-
-    public void lastMonth(){
-        GraphView graph = (GraphView) getView().findViewById(R.id.graph);
-        LineGraphSeries<DataPoint> series = new LineGraphSeries<>(new DataPoint[] {
-                new DataPoint(3, 2),
-                new DataPoint(1, 3),
-                new DataPoint(3, 1),
-                new DataPoint(4, 2),
-        });
-        graph.addSeries(series);
-    }
-
-    public void last3Months(){
-
-    }
+*/
 }
