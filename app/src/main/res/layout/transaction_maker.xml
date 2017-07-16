@@ -29,9 +29,9 @@
         android:layout_width="100dp"
         android:layout_height="100dp"
         app:srcCompat="@mipmap/hotdog"
-        android:layout_marginTop="11dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignStart="@+id/editText" />
+        android:layout_alignBottom="@+id/floatingActionButton2"
+        android:layout_alignStart="@+id/editText"
+        android:layout_marginBottom="11dp" />
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/floatingActionButton"

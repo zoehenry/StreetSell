@@ -18,10 +18,8 @@ import android.widget.TextView;
         @Nullable
         @Override
         public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
-            View view = inflater.inflate(R.layout.fragment_test, container, false);
+            View view = inflater.inflate(R.layout.transaction_maker, container, false);
             Bundle args = getArguments();
-            TextView nameView = view.findViewById(R.id.name);
-            nameView.setText(args.getString(ARG_NAME));
             return view;
         }
 
