@@ -21,6 +21,7 @@ import android.widget.TextView;
 
     public interface OnTransactionMakerListener{
         public void changeText(View view);
+        public void submitTransaction(View view);
     }
         private static final String ARG_NAME = "arg name";
 

@@ -93,6 +93,27 @@ public class MainActivity extends AppCompatActivity
         startActivityForResult(i, 20);
     }
 
+
+    @Override
+    public void submitTransaction(View view) {
+        Integer total = 0;
+        total  += 2 * Integer.parseInt( ( ((TextView)findViewById(R.id.editText6)).getText().toString()));
+        total += 4 * Integer.parseInt( ( ((TextView)findViewById(R.id.textView8)).getText().toString()));
+
+        CharSequence text = "Total is $" + total + "!";
+        int duration = Toast.LENGTH_LONG;
+
+        Toast toast = Toast.makeText(getBaseContext(), text, duration);
+        toast.setGravity(Gravity.TOP, 0, 450);
+        toast.show();
+
+        //put into database :O
+
+        ((TextView)findViewById(R.id.editText6)).setText("0");
+        ((TextView)findViewById(R.id.textView8)).setText("0");
+
+    }
+
     @Override
     public void changeText(View view) {
         Integer viewId = view.getId();
