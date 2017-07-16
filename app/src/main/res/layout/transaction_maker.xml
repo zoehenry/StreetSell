@@ -1,8 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:height="60dp"
+        android:ems="10"
+        android:gravity="center_vertical"
+        android:inputType="none"
+        android:text="Sale Tracker"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+        android:textSize="36sp" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -95,7 +108,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="192dp"
         android:orientation="horizontal"
         android:layout_below="@+id/linearLayout2">
 
@@ -181,10 +194,11 @@
     <Button
         android:id="@+id/button3"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="61dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
+        android:gravity="center"
         android:onClick="submitTransaction"
         android:text="Submit Purchase" />
 
-</RelativeLayout>
+</LinearLayout>
