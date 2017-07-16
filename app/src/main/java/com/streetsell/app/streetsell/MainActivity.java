@@ -203,11 +203,6 @@ public class MainActivity extends AppCompatActivity
             whatFood.setText(text);
             TextView date = (TextView) findViewById(R.id.textView82);
             date.setText("07/16/17");
-            int duration = Toast.LENGTH_SHORT;
-
-            Toast toast = Toast.makeText(getBaseContext(), text, duration);
-            toast.setGravity(Gravity.TOP, 0, 450);
-            toast.show();
         }
     }
 

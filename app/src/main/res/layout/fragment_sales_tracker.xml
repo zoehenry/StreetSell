@@ -52,6 +52,23 @@
                 android:layout_marginBottom="36dp"
                 android:onClick="last3Months"
                 android:text="3 Months" />
+
+            <TextView
+                android:id="@+id/editText7"
+                style="@android:style/Widget.AutoCompleteTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/lWeek"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="17dp"
+                android:ems="10"
+                android:inputType="none"
+                android:selectAllOnFocus="false"
+                android:singleLine="false"
+                android:text="Sales Over Time"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                android:textSize="30sp" />
         </RelativeLayout>
 
     </RelativeLayout>
