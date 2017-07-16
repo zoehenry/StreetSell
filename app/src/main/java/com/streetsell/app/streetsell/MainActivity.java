@@ -1,6 +1,7 @@
 package com.streetsell.app.streetsell;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -18,7 +19,8 @@ import android.widget.Toast;
 import java.util.List;
 import java.util.Vector;
 
-public class MainActivity extends AppCompatActivity implements ExpenseLogFragment.OnRecordExpenseListener {
+public class MainActivity extends AppCompatActivity
+        implements ExpenseLogFragment.OnRecordExpenseListener, SalesTracker.OnFragmentInteractionListener {
 
     private PagerAdapter mPagerAdapter;
 
@@ -66,7 +68,7 @@ public class MainActivity extends AppCompatActivity implements ExpenseLogFragmen
     private void inititializePaging() {
         List<Fragment> fragments = new Vector<>();
         fragments.add(TestFragment.newInstance("sell view"));
-        fragments.add(TestFragment.newInstance("graph view"));
+        fragments.add(new SalesTracker());
         fragments.add(new ExpenseLogFragment());
         this.mPagerAdapter = new MainPagerAdapter(getSupportFragmentManager(),fragments);
         ViewPager pager = (ViewPager) findViewById(R.id.viewpager);
@@ -90,5 +92,10 @@ public class MainActivity extends AppCompatActivity implements ExpenseLogFragmen
             toast.setGravity(Gravity.TOP, 0, 450);
             toast.show();
         }
+    }
+
+    @Override
+    public void onFragmentInteraction(Uri uri) {
+
     }
 }
