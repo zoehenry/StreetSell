@@ -40,15 +40,13 @@ public class ExpenseLogFragment extends Fragment {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mListener.onRecordExpense(view);
+                FragmentManager fm = getFragmentManager();
+                FragmentTransaction ft = fm.beginTransaction();
+                ft.replace(R.id.expenseFragment, new TestFragment(), "fragment_screen");
+                ft.commit();
+                // return expenseView;
             }
         });
         return expenseLogView;
-    }
-
-    @Override
-    public void onAttach(Context context) {
-        super.onAttach(context);
-        mListener = (OnRecordExpenseListener)getActivity();
     }
 }
