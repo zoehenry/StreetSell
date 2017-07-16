@@ -95,14 +95,35 @@ public class MainActivity extends AppCompatActivity
 
     @Override
     public void changeText(View view) {
+        Integer viewId = view.getId();
         System.out.println("IT WORKED 8:46");
         System.out.println(view);
-        Integer quantity = 0;
+        TextView textView = null;
+        Integer dif = 0;
+        switch (viewId) {
+            case R.id.imageButton:
+                textView = (TextView) findViewById(R.id.editText6);
+                dif = 1;
+                break;
+            case R.id.imageButton2:
+                textView = (TextView) findViewById(R.id.editText6);
+                dif = -1;
+                break;
+            case R.id.imageButton5:
+                textView = (TextView) findViewById(R.id.textView8);
+                dif = 1;
+                break;
+            case R.id.imageButton6:
+                textView = (TextView) findViewById(R.id.textView8);
+                dif = -1;
+                break;
 
-        TextView textView = (TextView) findViewById(R.id.editText6);
+        }
+
         System.out.println(textView);
-        quantity = Integer.parseInt(textView.getText().toString());
-        quantity += 1;
+        Integer quantity = Integer.parseInt(textView.getText().toString());
+        quantity += dif;
+        if (quantity < 0) {quantity = 0;};
         textView.setText(quantity.toString());
         System.out.println("Changed quantity to " + quantity);
 
