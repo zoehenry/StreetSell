@@ -1,0 +1,55 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.streetsell.app.streetsell.SalesTracker">
+
+    <!-- TODO: Update blank fragment layout -->
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.jjoe64.graphview.GraphView
+            android:id="@+id/graph"
+            android:layout_width="match_parent"
+            android:layout_height="400dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/lastWeek"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/lastMonth"
+                android:layout_alignBottom="@+id/lastMonth"
+                android:layout_marginStart="25dp"
+                android:layout_toEndOf="@+id/lastMonth"
+                android:text="Last Week" />
+
+            <Button
+                android:id="@+id/lastMonth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/last3Months"
+                android:layout_alignBottom="@+id/last3Months"
+                android:layout_marginStart="16dp"
+                android:layout_toEndOf="@+id/last3Months"
+                android:text="Last Month" />
+
+            <Button
+                android:id="@+id/last3Months"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginBottom="36dp"
+                android:text="3 Months" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</FrameLayout>
