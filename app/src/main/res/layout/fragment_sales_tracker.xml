@@ -14,39 +14,43 @@
         <com.jjoe64.graphview.GraphView
             android:id="@+id/graph"
             android:layout_width="match_parent"
-            android:layout_height="400dp" />
+            android:layout_height="350dp" />
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
             <Button
-                android:id="@+id/lastWeek"
+                android:id="@+id/lWeek"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignBaseline="@+id/lastMonth"
-                android:layout_alignBottom="@+id/lastMonth"
+                android:layout_alignBaseline="@+id/lMonth"
+                android:layout_alignBottom="@+id/lMonth"
                 android:layout_marginStart="25dp"
-                android:layout_toEndOf="@+id/lastMonth"
-                android:text="Last Week" />
+                android:layout_toEndOf="@+id/lMonth"
+                android:text="Last Week"
+                android:onClick="lastWeek"
+                android:visibility="visible" />
 
             <Button
-                android:id="@+id/lastMonth"
+                android:id="@+id/lMonth"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignBaseline="@+id/last3Months"
-                android:layout_alignBottom="@+id/last3Months"
+                android:layout_alignBaseline="@+id/l3Months"
+                android:layout_alignBottom="@+id/l3Months"
                 android:layout_marginStart="16dp"
-                android:layout_toEndOf="@+id/last3Months"
+                android:layout_toEndOf="@+id/l3Months"
+                android:onClick="lastMonth"
                 android:text="Last Month" />
 
             <Button
-                android:id="@+id/last3Months"
+                android:id="@+id/l3Months"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
                 android:layout_alignParentStart="true"
                 android:layout_marginBottom="36dp"
+                android:onClick="last3Months"
                 android:text="3 Months" />
         </RelativeLayout>
 

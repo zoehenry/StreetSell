@@ -18,12 +18,19 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.jjoe64.graphview.GraphView;
+import com.jjoe64.graphview.series.DataPoint;
+import com.jjoe64.graphview.series.LineGraphSeries;
+
 import java.util.List;
 import java.util.Vector;
+
+import static android.R.attr.data;
 
 public class MainActivity extends AppCompatActivity
         implements ExpenseLogFragment.OnRecordExpenseListener,
         SalesTracker.OnFragmentInteractionListener,
+        SalesTracker.OnSalesTrackerListener,
         TransactionMaker.OnTransactionMakerListener {
 
     private PagerAdapter mPagerAdapter;
@@ -127,4 +134,53 @@ public class MainActivity extends AppCompatActivity
     public void onFragmentInteraction(Uri uri) {
 
     }
+
+    GraphView graph;
+
+    public  void lastWeek(View v){
+        if( graph != null )
+            graph.removeAllSeries();
+        graph = (GraphView) findViewById(R.id.graph);
+        LineGraphSeries<DataPoint> series = new LineGraphSeries<>(new DataPoint[] {
+                new DataPoint(0, 1),
+                new DataPoint(1, 5),
+                new DataPoint(2, 3),
+        });
+        graph.addSeries(series);
+    }
+
+    public  void lastMonth(View v){
+        if( graph != null )
+            graph.removeAllSeries();
+        graph = (GraphView) findViewById(R.id.graph);
+        LineGraphSeries<DataPoint> series = new LineGraphSeries<>(new DataPoint[] {
+                new DataPoint(3, 2),
+                new DataPoint(1, 3),
+                new DataPoint(3, 1),
+                new DataPoint(4, 2),
+        });
+        graph.addSeries(series);
+    }
+
+    public  void last3Months(View v){
+        if( graph != null )
+            graph.removeAllSeries();
+        graph = (GraphView) findViewById(R.id.graph);
+        LineGraphSeries<DataPoint> series = new LineGraphSeries<>(new DataPoint[] {
+                new DataPoint(3, 2),
+                new DataPoint(1, 3),
+                new DataPoint(3, 1),
+                new DataPoint(4, 2),
+                new DataPoint(4, 2),
+                new DataPoint(4, 2),
+                new DataPoint(5, 16),
+                new DataPoint(4, 2),
+                new DataPoint(4, 2),
+
+        });
+        graph.addSeries(series);
+    }
+
+
+
 }
