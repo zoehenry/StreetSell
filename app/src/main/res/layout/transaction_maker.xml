@@ -61,14 +61,15 @@
 
                 <ImageButton
                     android:id="@+id/imageButton2"
-                    android:layout_width="79dp"
+                    android:layout_width="80dp"
                     android:layout_height="match_parent"
+                    android:background="?android:attr/selectableItemBackground"
                     android:onClick="changeText"
-                    app:srcCompat="@android:drawable/arrow_down_float" />
+                    app:srcCompat="@mipmap/minus" />
 
                 <TextView
                     android:id="@+id/editText6"
-                    android:layout_width="78dp"
+                    android:layout_width="80dp"
                     android:layout_height="match_parent"
                     android:layout_below="@+id/floatingActionButton"
                     android:layout_toEndOf="@+id/imageView8"
@@ -80,10 +81,11 @@
 
                 <ImageButton
                     android:id="@+id/imageButton"
-                    android:layout_width="match_parent"
+                    android:layout_width="80dp"
                     android:layout_height="match_parent"
+                    android:background="?attr/selectableItemBackground"
                     android:onClick="changeText"
-                    app:srcCompat="@android:drawable/arrow_up_float" />
+                    app:srcCompat="@mipmap/plus" />
 
             </LinearLayout>
 
@@ -146,15 +148,15 @@
 
                 <ImageButton
                     android:id="@+id/imageButton6"
-                    android:layout_width="match_parent"
+                    android:layout_width="80dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"
+                    android:background="?attr/selectableItemBackground"
                     android:onClick="changeText"
-                    app:srcCompat="@android:drawable/arrow_up_float" />
+                    app:srcCompat="@mipmap/minus" />
 
                 <TextView
                     android:id="@+id/textView8"
-                    android:layout_width="78dp"
+                    android:layout_width="80dp"
                     android:layout_height="match_parent"
                     android:layout_below="@+id/floatingActionButton"
                     android:layout_toEndOf="@+id/imageView8"
@@ -167,10 +169,11 @@
 
                 <ImageButton
                     android:id="@+id/imageButton5"
-                    android:layout_width="79dp"
+                    android:layout_width="80dp"
                     android:layout_height="match_parent"
+                    android:background="?attr/selectableItemBackground"
                     android:onClick="changeText"
-                    app:srcCompat="@android:drawable/arrow_down_float" />
+                    app:srcCompat="@mipmap/plus" />
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
@@ -182,6 +185,6 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
         android:onClick="submitTransaction"
-        android:text="Button" />
+        android:text="Submit Purchase" />
 
 </RelativeLayout>
