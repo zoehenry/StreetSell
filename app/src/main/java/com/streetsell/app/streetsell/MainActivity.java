@@ -12,9 +12,9 @@ import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -22,7 +22,9 @@ import java.util.List;
 import java.util.Vector;
 
 public class MainActivity extends AppCompatActivity
-        implements ExpenseLogFragment.OnRecordExpenseListener, SalesTracker.OnFragmentInteractionListener {
+        implements ExpenseLogFragment.OnRecordExpenseListener,
+        SalesTracker.OnFragmentInteractionListener,
+        TransactionMaker.OnTransactionMakerListener {
 
     private PagerAdapter mPagerAdapter;
 
@@ -85,19 +87,31 @@ public class MainActivity extends AppCompatActivity
     }
 
     @Override
+    public void changeText(View view) {
+        System.out.println("IT WORKED 8:46");
+        System.out.println(view);
+        Integer quantity = 0;
+
+        TextView textView = (TextView) findViewById(R.id.editText6);
+        System.out.println(textView);
+        quantity = Integer.parseInt(textView.getText().toString());
+        quantity += 1;
+        textView.setText(quantity.toString());
+        System.out.println("Changed quantity to " + quantity);
+
+
+    }
+
+    @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (resultCode == RESULT_OK && requestCode == 20) {
             String item = data.getExtras().getString("purchase");
             String text = item;
-            String cost = data.getExtras().getString("cost");
-            String number = "$" + cost;
-            TextView whatCost = (TextView) findViewById(R.id.textView79);
-            whatCost.setText(number);
-            TextView whatFood = (TextView) findViewById(R.id.textView81);
-            whatFood.setText(text);
-            TextView date = (TextView) findViewById(R.id.textView82);
-            date.setText("07/16/17");
+            int duration = Toast.LENGTH_SHORT;
 
+            Toast toast = Toast.makeText(getBaseContext(), text, duration);
+            toast.setGravity(Gravity.TOP, 0, 450);
+            toast.show();
         }
     }
 
