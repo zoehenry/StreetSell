@@ -6,6 +6,92 @@
     android:orientation="vertical">
 
     <TextView
+        android:id="@+id/textView78"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView54"
+        android:layout_alignBottom="@+id/textView54"
+        android:layout_alignStart="@+id/textView68"
+        android:text="Hamburger buns" />
+
+    <TextView
+        android:id="@+id/textView77"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cheese"
+        android:layout_alignBaseline="@+id/textView60"
+        android:layout_alignBottom="@+id/textView60"
+        android:layout_alignStart="@+id/textView76" />
+
+    <TextView
+        android:id="@+id/textView76"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Water"
+        android:layout_alignBaseline="@+id/howMuchHeader"
+        android:layout_alignBottom="@+id/howMuchHeader"
+        android:layout_alignStart="@+id/textView75" />
+
+    <TextView
+        android:id="@+id/textView75"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Onions"
+        android:layout_alignBaseline="@+id/textView59"
+        android:layout_alignBottom="@+id/textView59"
+        android:layout_alignStart="@+id/textView74" />
+
+    <TextView
+        android:id="@+id/textView74"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textView68"
+        android:text="Lettuce"
+        android:layout_alignBottom="@+id/textView58" />
+
+    <TextView
+        android:id="@+id/textView73"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textView68"
+        android:text="Tomato"
+        android:layout_alignBottom="@+id/textView57" />
+
+    <TextView
+        android:id="@+id/textView72"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textView68"
+        android:text="Bacon"
+        android:layout_alignBottom="@+id/textView56" />
+
+    <TextView
+        android:id="@+id/textView71"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textView68"
+        android:text="Ketchup"
+        android:layout_alignTop="@+id/textView55" />
+
+    <TextView
+        android:id="@+id/textView68"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView53"
+        android:layout_alignBottom="@+id/textView53"
+        android:layout_toEndOf="@+id/button"
+        android:text="What?" />
+
+    <TextView
+        android:id="@+id/dateHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button"
+        android:layout_marginTop="24dp"
+        android:layout_toStartOf="@+id/button"
+        android:text="Date" />
+
+    <TextView
         android:id="@+id/textView2"
         android:layout_width="match_parent"
         android:layout_height="60dp"
@@ -18,9 +104,171 @@
 
     <Button
         android:id="@+id/button"
-        android:layout_width="match_parent"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
+        android:text="Record New Expense"
         android:layout_below="@+id/textView2"
-        android:text="Record New Expense" />
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/howMuchHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView52"
+        android:layout_alignBottom="@+id/textView52"
+        android:layout_alignStart="@+id/textView59" />
+
+    <TextView
+        android:id="@+id/textView60"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="$128.43"
+        android:layout_alignBaseline="@+id/textView45"
+        android:layout_alignBottom="@+id/textView45"
+        android:layout_alignStart="@+id/howMuchHeader" />
+
+    <TextView
+        android:id="@+id/textView63"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView52"
+        android:layout_alignBottom="@+id/textView52"
+        android:layout_alignStart="@+id/textView59"
+        android:text="$128.54" />
+
+    <TextView
+        android:id="@+id/textView59"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView51"
+        android:layout_alignBottom="@+id/textView51"
+        android:layout_alignStart="@+id/textView58"
+        android:text="$123.86" />
+
+    <TextView
+        android:id="@+id/textView58"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView50"
+        android:layout_alignBottom="@+id/textView50"
+        android:layout_alignStart="@+id/textView57"
+        android:text="$116.94" />
+
+    <TextView
+        android:id="@+id/textView57"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView49"
+        android:layout_alignBottom="@+id/textView49"
+        android:layout_alignStart="@+id/textView56"
+        android:text="$112.37" />
+
+    <TextView
+        android:id="@+id/textView56"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView48"
+        android:layout_alignBottom="@+id/textView48"
+        android:layout_alignStart="@+id/textView55"
+        android:text="$98.00" />
+
+    <TextView
+        android:id="@+id/textView55"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView47"
+        android:layout_alignBottom="@+id/textView47"
+        android:layout_alignStart="@+id/textView54"
+        android:text="$137.50" />
+
+    <TextView
+        android:id="@+id/textView54"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView46"
+        android:layout_alignBottom="@+id/textView46"
+        android:layout_alignStart="@+id/textView53"
+        android:text="$100.00" />
+
+    <TextView
+        android:id="@+id/textView53"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/dateHeader"
+        android:layout_alignBottom="@+id/dateHeader"
+        android:layout_centerHorizontal="true"
+        android:text="How Much?" />
+
+    <TextView
+        android:id="@+id/textView45"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="07/15/17"
+        android:layout_marginTop="22dp"
+        android:layout_below="@+id/textView52"
+        android:layout_alignStart="@+id/textView52" />
+
+    <TextView
+        android:id="@+id/textView52"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textView51"
+        android:layout_below="@+id/textView51"
+        android:layout_marginTop="24dp"
+        android:text="07/15/17" />
+
+    <TextView
+        android:id="@+id/textView51"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textView50"
+        android:layout_below="@+id/textView50"
+        android:layout_marginTop="23dp"
+        android:text="07/15/17" />
+
+    <TextView
+        android:id="@+id/textView50"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textView49"
+        android:layout_below="@+id/textView49"
+        android:layout_marginTop="24dp"
+        android:text="07/15/17" />
+
+    <TextView
+        android:id="@+id/textView49"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textView48"
+        android:layout_below="@+id/textView48"
+        android:layout_marginTop="24dp"
+        android:text="07/15/17" />
+
+    <TextView
+        android:id="@+id/textView48"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textView47"
+        android:layout_below="@+id/textView47"
+        android:layout_marginTop="22dp"
+        android:text="07/15/17" />
+
+    <TextView
+        android:id="@+id/textView47"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textView46"
+        android:layout_below="@+id/textView46"
+        android:layout_marginTop="20dp"
+        android:text="07/15/17" />
+
+    <TextView
+        android:id="@+id/textView46"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/dateHeader"
+        android:layout_below="@+id/dateHeader"
+        android:layout_marginTop="30dp"
+        android:text="07/15/17" />
 
 </RelativeLayout>
