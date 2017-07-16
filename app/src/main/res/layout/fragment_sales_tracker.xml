@@ -24,34 +24,33 @@
                 android:id="@+id/lWeek"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:onClick="last3Months"
+                android:text="3 Months"
+                android:visibility="visible"
                 android:layout_alignBaseline="@+id/lMonth"
                 android:layout_alignBottom="@+id/lMonth"
-                android:layout_marginStart="25dp"
-                android:layout_toEndOf="@+id/lMonth"
-                android:text="Last Week"
-                android:onClick="lastWeek"
-                android:visibility="visible" />
+                android:layout_alignEnd="@+id/editText7"
+                android:layout_marginEnd="11dp" />
 
             <Button
                 android:id="@+id/lMonth"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:onClick="lastMonth"
+                android:text="Last Month"
                 android:layout_alignBaseline="@+id/l3Months"
                 android:layout_alignBottom="@+id/l3Months"
-                android:layout_marginStart="16dp"
-                android:layout_toEndOf="@+id/l3Months"
-                android:onClick="lastMonth"
-                android:text="Last Month" />
+                android:layout_centerHorizontal="true" />
 
             <Button
                 android:id="@+id/l3Months"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:layout_alignParentStart="true"
                 android:layout_marginBottom="36dp"
-                android:onClick="last3Months"
-                android:text="3 Months" />
+                android:onClick="lastWeek"
+                android:text="Last Week"
+                android:layout_alignParentBottom="true"
+                android:layout_alignStart="@+id/editText7" />
 
             <TextView
                 android:id="@+id/editText7"
