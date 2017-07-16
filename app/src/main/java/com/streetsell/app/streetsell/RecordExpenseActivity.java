@@ -28,7 +28,10 @@ public class RecordExpenseActivity extends AppCompatActivity {
                 Intent i = new Intent(getBaseContext(), RecordExpenseActivity.class);
                 EditText purchaseInputView = (EditText) findViewById(R.id.editText3);
                 String purchaseInputText = (String) purchaseInputView.getText().toString();
+                EditText costInputView = (EditText) findViewById(R.id.editText4);
+                String costInputText = (String) costInputView.getText().toString();
                 i.putExtra("purchase", purchaseInputText);
+                i.putExtra("cost", costInputText);
                 setResult(RESULT_OK, i);
 
                 CharSequence text = "Your expenses have been saved!";

@@ -12,8 +12,10 @@ import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.List;
@@ -87,11 +89,15 @@ public class MainActivity extends AppCompatActivity
         if (resultCode == RESULT_OK && requestCode == 20) {
             String item = data.getExtras().getString("purchase");
             String text = item;
-            int duration = Toast.LENGTH_SHORT;
+            String cost = data.getExtras().getString("cost");
+            String number = "$" + cost;
+            TextView whatCost = (TextView) findViewById(R.id.textView79);
+            whatCost.setText(number);
+            TextView whatFood = (TextView) findViewById(R.id.textView81);
+            whatFood.setText(text);
+            TextView date = (TextView) findViewById(R.id.textView82);
+            date.setText("07/16/17");
 
-            Toast toast = Toast.makeText(getBaseContext(), text, duration);
-            toast.setGravity(Gravity.TOP, 0, 450);
-            toast.show();
         }
     }
 

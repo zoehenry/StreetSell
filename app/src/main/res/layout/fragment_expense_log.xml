@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/expenseLogFragment"
+    android:name="expenseLogFragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
@@ -89,7 +90,7 @@
         android:layout_below="@+id/button"
         android:layout_marginTop="24dp"
         android:layout_toStartOf="@+id/button"
-        android:text="Date" />
+        android:text="         " />
 
     <TextView
         android:id="@+id/textView2"
@@ -194,10 +195,10 @@
         android:id="@+id/textView53"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/dateHeader"
-        android:layout_alignBottom="@+id/dateHeader"
+        android:text="How Much?"
+        android:layout_above="@+id/textView46"
         android:layout_centerHorizontal="true"
-        android:text="How Much?" />
+        android:layout_marginBottom="10dp" />
 
     <TextView
         android:id="@+id/textView45"
@@ -270,5 +271,36 @@
         android:layout_below="@+id/dateHeader"
         android:layout_marginTop="30dp"
         android:text="07/15/17" />
+
+    <TextView
+        android:id="@+id/textView79"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textView53"
+        android:layout_below="@+id/textView53" />
+
+    <TextView
+        android:id="@+id/textView80"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Date"
+        android:layout_alignBaseline="@+id/textView53"
+        android:layout_alignBottom="@+id/textView53"
+        android:layout_alignStart="@+id/dateHeader" />
+
+    <TextView
+        android:id="@+id/textView81"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView79"
+        android:layout_alignBottom="@+id/textView79"
+        android:layout_alignStart="@+id/textView68" />
+
+    <TextView
+        android:id="@+id/textView82"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/textView46"
+        android:layout_below="@+id/dateHeader" />
 
 </RelativeLayout>
